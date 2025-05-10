@@ -6,10 +6,10 @@
   <title>Michael Wu | Software Engineer</title>
   <style>
     :root {
-      --bg-color: #000;                    /* still a dark background */
-      --text-color: #eee;                  /* light text for contrast */
-      --primary-color: #0ABAB5;            /* Tiffany Blue */
-      --accent-color: #BF00FF;             /* Neon Purple */
+      --bg-color: #000;
+      --text-color: #eee;
+      --primary-color: #0ABAB5;    /* Tiffany Blue */
+      --accent-color: #BF00FF;     /* Neon Purple */
       --font-family: 'Segoe UI', Tahoma, sans-serif;
     }
 
@@ -85,11 +85,9 @@
       background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
       color: #000;
       font-size: 1.25rem;
-      list-style: none;
-      outline: none;
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      box-shadow: inset 0 -2px 4px rgba(0,0,0,0.3);
+      outline: none;
     }
     .accordion summary::-webkit-details-marker {
       display: none;
@@ -215,25 +213,85 @@
       <div class="section-content">
         <div class="item card">
           <p class="item-title">
-            Software Engineer — fAlpha.ai, New York, NY
+            Software Engineer (2nd engineer on the team) — fAlpha.ai, New York, NY
           </p>
           <p class="item-meta">December 2024 – Present</p>
           <ul>
             <li>
-              Tuned 10+ MongoDB aggregation pipelines; redesigned crawler logic to cut process time by 65%.
+              Authored and tuned 10+ MongoDB aggregation pipelines and added 10+ feature fields;
+              redesigned crawler logic to reduce processing time by 65% (3 h → 1 h); fixed 10+ bugs to revive throughput.
             </li>
             <li>
-              Managed 4 EC2 instances & 8 ECS tasks; slashed downtime from 25% to 5%.
+              Managed 4 EC2 instances and provisioned 8 ECS tasks on AWS; reduced downtime from 25% to 5% by optimizing queries and configurations.
             </li>
             <li>
-              Built 6+ React components, resolved 12+ UI bugs, boosting engagement.
+              Built 6+ React components and resolved 12+ UI bugs, boosting user engagement.
             </li>
             <li>
-              Mentored 3 MIT interns and collaborated with the CEO on roadmap strategy.
+              Liaised with the CEO on roadmap strategy and mentored 3 MIT interns, halving their ramp-up time.
             </li>
           </ul>
         </div>
-        <!-- add other .item.card blocks here -->
+
+        <div class="item card">
+          <p class="item-title">
+            Software Engineer — UChicago Systems Research on Availability, Reliability and Efficiency, Chicago, IL
+          </p>
+          <p class="item-meta">September 2024 – December 2024</p>
+          <ul>
+            <li>
+              Co-engineered a Hadoop &amp; Spark profiler for offline/online image, audio, and text preprocessing—3–7× faster across batch sizes, data types, and caching strategies.
+            </li>
+            <li>
+              Squashed profiling bugs, improving measurement accuracy by 25% and ensuring reliable performance analysis.
+            </li>
+          </ul>
+        </div>
+
+        <div class="item card">
+          <p class="item-title">
+            Software Engineer — Coding Flora, Beijing
+            (<a href="https://github.com/Ray16/flower_hunt" target="_blank">GitHub</a>)
+          </p>
+          <p class="item-meta">June 2024 – August 2024</p>
+          <ul>
+            <li>
+              Designed backend of a mobile app providing Leetcode progress review services among peers, leveraging Firebase, FastAPI, and Baidu AI in Python; MVP published on App Store.
+            </li>
+            <li>
+              Won 2nd place in “AI4Science Hackathon” by Baidu AI Competition with a team of 4 of 15.
+            </li>
+          </ul>
+        </div>
+
+        <div class="item card">
+          <p class="item-title">
+            Software Engineer — UC Santa Cruz (OSRE), Chicago, IL
+          </p>
+          <p class="item-meta">June 2023 – September 2023</p>
+          <ul>
+            <li>Built a GPU emulator (GPEmu) in PyTorch, cutting cloud GPU costs.</li>
+            <li>
+              Profiled 30 DL models on 6 GPU types; improved emulation accuracy and generated foundational data for research.
+            </li>
+            <li>Diagnosed inter-GPU communication issues and drafted future design proposals.</li>
+            <li>
+              Authored reproducible docs and blog posts, raising visibility across 30+ research teams.
+            </li>
+          </ul>
+        </div>
+
+        <div class="item card">
+          <p class="item-title">
+            Software Engineer — Referee AI (Polsky Center Startup), Chicago, IL
+          </p>
+          <p class="item-meta">June 2022 – September 2022</p>
+          <ul>
+            <li>
+              Led development of a social-science paper evaluation tool; researched technical papers and tested GPT-2.5, Transformer, and BERT models with a team of 3.
+            </li>
+          </ul>
+        </div>
       </div>
     </details>
 
@@ -243,12 +301,106 @@
       <div class="section-content">
         <div class="item card">
           <p class="item-title">Golite Compiler</p>
-          <p class="item-meta">Dec 2024 – Mar 2025</p>
+          <p class="item-meta">December 2024 – March 2025</p>
           <ul>
-            <li>Built multi-pass Go compiler: scanner, parser, AST, LLVM IR, Armv8 codegen.</li>
+            <li>
+              Built a multi-pass compiler in Go from scratch: scanner, recursive-descent parser, AST, LLVM IR, and Armv8 code generation.
+            </li>
           </ul>
         </div>
-        <!-- add other project cards here -->
+
+        <div class="item card">
+          <p class="item-title">AWS Genomics Annotation Service</p>
+          <p class="item-meta">December 2024 – March 2025</p>
+          <ul>
+            <li>
+              Orchestrated a serverless web app on AWS (EC2, S3, Lambda, SNS/SQS, Step Functions, DynamoDB, Glacier), auto-scaled via Launch Templates.
+            </li>
+          </ul>
+        </div>
+
+        <div class="item card">
+          <p class="item-title">Image Processing System</p>
+          <p class="item-meta">September 2024 – December 2024</p>
+          <ul>
+            <li>
+              Developed a Go-based image editor applying 2D convolutions; achieved 3–7× speedup via a multithreaded pipeline with work-stealing.
+            </li>
+          </ul>
+        </div>
+
+        <div class="item card">
+          <p class="item-title">Creep on Ghost: Network Analyst</p>
+          <p class="item-meta">January 2024 – March 2024</p>
+          <ul>
+            <li>
+              Analyzed user web navigation with Selenium and Wireshark; implemented BFS on JSON logs, predicting 22 pages by timing and packet size.
+            </li>
+          </ul>
+        </div>
+
+        <div class="item card">
+          <p class="item-title">PintOS</p>
+          <p class="item-meta">September 2023 – December 2023</p>
+          <ul>
+            <li>
+              Implemented an OS framework for x86 in C, supporting threading, user programs, and a file system; passed robustness tests with multiple debuggers.
+            </li>
+          </ul>
+        </div>
+
+        <div class="item card">
+          <p class="item-title">Modern Microprocessor</p>
+          <p class="item-meta">March 2023 – June 2023</p>
+          <ul>
+            <li>
+              Engineered an ARMv8 pipelined microprocessor in C simulator with branch predictor and caches.
+            </li>
+          </ul>
+        </div>
+
+        <div class="item card">
+          <p class="item-title">
+            Ninja Fight &amp; Chilling Cat —
+            Personal Project
+          </p>
+          <p class="item-meta">June 2022 – September 2022</p>
+          <ul>
+            <li>
+              Created two sprite-based JS games, deployed on Netlify; demoed in final presentations.
+            </li>
+            <li>
+              Won “Most Engaging Award” among 15 teams at UChicago Summer Tech Showcase 2022.
+            </li>
+          </ul>
+        </div>
+
+        <div class="item card">
+          <p class="item-title">Database Systems: Crusty DB</p>
+          <p class="item-meta">January 2022 – March 2022</p>
+          <ul>
+            <li>
+              Architected a Rust-based relational database management system from the ground up.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </details>
+
+    <!-- Links -->
+    <details open id="links" class="accordion">
+      <summary>Links</summary>
+      <div class="section-content">
+        <ul>
+          <li><a href="mailto:wuh@uchicago.edu">Email</a></li>
+          <li><a href="https://www.linkedin.com/in/haoran-wu-536a90200/">LinkedIn</a></li>
+          <li><a href="https://github.com/FarFlyField">GitHub</a></li>
+          <li>
+            <a href="https://ucsc-ospo.github.io/report/osre23/utexas/gpuemulator/20230613-haoranwu/">
+              OSRE GPU Emulator Report
+            </a>
+          </li>
+        </ul>
       </div>
     </details>
   </div>
