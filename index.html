@@ -1,1 +1,272 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Michael Wu | Software Engineer</title>
+  <style>
+    :root {
+      --bg-color: #000;                    /* still a dark background */
+      --text-color: #eee;                  /* light text for contrast */
+      --primary-color: #0ABAB5;            /* Tiffany Blue */
+      --accent-color: #BF00FF;             /* Neon Purple */
+      --font-family: 'Segoe UI', Tahoma, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg-color);
+      color: var(--text-color);
+      font-family: var(--font-family);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--primary-color);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      text-shadow: 0 0 8px var(--accent-color);
+    }
+    header p {
+      margin: 0.5rem 0;
+    }
+
+    /* Intro */
+    #intro {
+      text-align: center;
+      padding: 1.5rem;
+    }
+    .profile-photo {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid var(--accent-color);
+      box-shadow: 0 0 10px var(--accent-color);
+      margin-bottom: 1rem;
+    }
+    #intro p {
+      max-width: 600px;
+      margin: auto;
+      font-size: 1.1rem;
+    }
+
+    /* Accordion */
+    .accordion {
+      border: 1px solid var(--accent-color);
+      border-radius: 6px;
+      margin-bottom: 1rem;
+      overflow: hidden;
+      background: #111;
+      box-shadow: 0 0 12px rgba(191,0,255,0.6);
+    }
+    .accordion summary {
+      cursor: pointer;
+      padding: 0.75rem 1rem;
+      background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+      color: #000;
+      font-size: 1.25rem;
+      list-style: none;
+      outline: none;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      box-shadow: inset 0 -2px 4px rgba(0,0,0,0.3);
+    }
+    .accordion summary::-webkit-details-marker {
+      display: none;
+    }
+    .accordion summary::after {
+      content: '▸';
+      float: right;
+      transition: transform 0.2s ease;
+      color: #000;
+    }
+    .accordion[open] summary::after {
+      transform: rotate(90deg);
+    }
+    .section-content {
+      padding: 1rem;
+      background: #111;
+      overflow: hidden;
+      transition: height 0.2s ease;
+    }
+
+    /* Cards */
+    .card {
+      border: 1px solid var(--primary-color);
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      background: #222;
+      box-shadow: 0 0 8px rgba(10,186,181,0.6);
+    }
+
+    .item-title {
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary-color);
+    }
+    .item-meta {
+      font-style: italic;
+      margin-bottom: 0.5rem;
+      color: var(--accent-color);
+    }
+    ul {
+      list-style-type: disc;
+      margin-left: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Michael Wu</h1>
+      <p>+1 (312) 404-2663 | <a href="mailto:wuh@uchicago.edu">wuh@uchicago.edu</a></p>
+      <p>
+        <a href="https://www.linkedin.com/in/haoran-wu-536a90200/">LinkedIn</a> |
+        <a href="https://github.com/FarFlyField">GitHub</a>
+      </p>
+    </header>
+
+    <!-- Intro with Photo -->
+    <section id="intro">
+      <img src="public/images/myPic.JPG" alt="Haoran Wu" class="profile-photo">
+      <p>
+        Hello! I’m Haoran (“Michael”) Wu, a Software Engineer passionate about building
+        high-performance distributed systems, ML pipelines, and rich UIs. Welcome to
+        my corner of the web—feel free to explore!
+      </p>
+    </section>
+
+    <!-- Education -->
+    <details open id="education" class="accordion">
+      <summary>Education</summary>
+      <div class="section-content">
+        <div class="item">
+          <p class="item-title">
+            Master of Science in Computer Science, Specialization in Application Development
+          </p>
+          <p class="item-meta">
+            The University of Chicago — Chicago, IL • December 2025 / March 2026
+          </p>
+          <ul>
+            <li>
+              Relevant Courses: Parallel Programming, Advanced Operating Systems, Compilers,
+              Cloud Computing, Natural Language Processing, Web Development,
+              Human-Computer Interaction, Topics in Algorithmic Game Theory
+            </li>
+          </ul>
+        </div>
+        <div class="item">
+          <p class="item-title">
+            Bachelor of Science in Computer Science &amp; Bachelor of Arts in Economics
+          </p>
+          <p class="item-meta">
+            The University of Chicago — Chicago, IL • June 2024
+          </p>
+          <ul>
+            <li>
+              Relevant Courses: Operating Systems, Database Systems, Computer Architecture,
+              Computer Security, Algorithms
+            </li>
+          </ul>
+        </div>
+      </div>
+    </details>
+
+    <!-- Skills -->
+    <details open id="skills" class="accordion">
+      <summary>Skills</summary>
+      <div class="section-content">
+        <div class="item">
+          <p class="item-title">Programming Languages</p>
+          <p>Python, Golang, Java, C/C++, Rust, Racket, JavaScript, SQL, HTML5 &amp; CSS, Bash, R, Assembly</p>
+        </div>
+        <div class="item">
+          <p class="item-title">Developer Tools &amp; Frameworks</p>
+          <p>AWS, Git, PyTorch, MATLAB, Node.js, FastAPI, Firebase, Selenium, Docker, CUDA, Wireshark, Hadoop, Spark, MongoDB, React, Hugging Face, Jupyter Notebooks</p>
+        </div>
+      </div>
+    </details>
+
+    <!-- Professional Experience -->
+    <details open id="experience" class="accordion">
+      <summary>Professional Experience</summary>
+      <div class="section-content">
+        <div class="item card">
+          <p class="item-title">
+            Software Engineer — fAlpha.ai, New York, NY
+          </p>
+          <p class="item-meta">December 2024 – Present</p>
+          <ul>
+            <li>
+              Tuned 10+ MongoDB aggregation pipelines; redesigned crawler logic to cut process time by 65%.
+            </li>
+            <li>
+              Managed 4 EC2 instances & 8 ECS tasks; slashed downtime from 25% to 5%.
+            </li>
+            <li>
+              Built 6+ React components, resolved 12+ UI bugs, boosting engagement.
+            </li>
+            <li>
+              Mentored 3 MIT interns and collaborated with the CEO on roadmap strategy.
+            </li>
+          </ul>
+        </div>
+        <!-- add other .item.card blocks here -->
+      </div>
+    </details>
+
+    <!-- Projects -->
+    <details open id="projects" class="accordion">
+      <summary>Projects</summary>
+      <div class="section-content">
+        <div class="item card">
+          <p class="item-title">Golite Compiler</p>
+          <p class="item-meta">Dec 2024 – Mar 2025</p>
+          <ul>
+            <li>Built multi-pass Go compiler: scanner, parser, AST, LLVM IR, Armv8 codegen.</li>
+          </ul>
+        </div>
+        <!-- add other project cards here -->
+      </div>
+    </details>
+  </div>
+
+  <!-- Smooth accordion toggle -->
+  <script>
+    document.querySelectorAll('.accordion').forEach(details => {
+      const content = details.querySelector('.section-content');
+      details.addEventListener('toggle', () => {
+        if (details.open) {
+          content.style.height = content.scrollHeight + 'px';
+          setTimeout(() => { content.style.height = 'auto'; }, 200);
+        } else {
+          content.style.height = content.scrollHeight + 'px';
+          requestAnimationFrame(() => { content.style.height = '0'; });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
